@@ -6,27 +6,11 @@
     <title>بلاغ جديد</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/request_form.css" rel="stylesheet">
-    <?php
-    if(isset($_POST['req_sub'])){
-        $db=mysqli_connect('localhost','root','','ags_police');
 
-        $req_type =mysqli_real_escape_string($db,$_POST['req_type']);
-        $plate =mysqli_real_escape_string($db,$_POST['plate']);
-        $car_type =mysqli_real_escape_string($db,$_POST['car_type']);
-        $car_color =mysqli_real_escape_string($db,$_POST['car_color']);
-        $person_desc =mysqli_real_escape_string($db,$_POST['req_desc']);
-        $code_no =mysqli_real_escape_string($db,$_POST['code_no']);
-        $req_st =mysqli_real_escape_string($db,$_POST['req_st']);
-
-
-        $sql = "insert  into request_police (req_type,plate,car_type,car_color,person_desc,code_no,req_st) values($req_type,$plate,$car_type,$car_color,$person_desc,$code_no,$req_st);";
-        mysqli_query($db,$sql);
-    }
-    ?>
 </head>
 <body>
 <div class="request_form">
-<form class="" post id="request" action="request_form.php">
+<form     method="POST">
     <h2>تسجيل بلاغ جديد</h2>
     <input class="form-control" type="text" name="req_type" id="req_type" placeholder="نوع البلاغ"><br>
     <input class="form-control" type="text" name="plate" id="plate" placeholder="رقم اللوحة"><br>
@@ -40,10 +24,32 @@
         <option>عاجل</option>
         <option>عادى</option>
     </select>
-    <button id="req_sub" name="req_sub" type="button" class="btn btn-primary">ارسال البلاغ</button>
+    <button id="req_sub" name="submit" type="button" class="btn btn-primary">ارسال البلاغ</button>
 
 </form>
 </div>
+<?php
+
+
+if($_POST['submit']) {
+    $db = mysqli_connect('localhost', 'root', 'root', 'ags_police');
+
+    $req_type = $_POST['req_type'];
+    $plate = $_POST['plate'];
+    $car_type = $_POST['car_type'];
+    $car_color = $_POST['car_color'];
+    $person_desc = $_POST['req_desc'];
+    $req_desc = $_POST['req_desc'];
+    $code_no = $_POST['code_no'];
+
+
+    $sql = "INSERT  INTO request_police (req_type,plate,car_type,car_color,person_desc,req_desc,code_no) VALUES ('$req_type','$plate','$car_type','$car_color','$person_desc','$req_desc','$code_no');";
+    if (!mysqli_query($db, $sql)) {
+        header("refresh:2; url=request_from.php");
+    };
+};
+        ?>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
