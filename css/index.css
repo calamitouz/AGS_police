@@ -1,0 +1,32 @@
+body {
+    background-image: url("../../php_storm_projects/AGS_police/images/bakg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#input{
+    text-align: center;
+}
+.register{
+    width: 500px;
+    margin: 220px 0px 0px 430px;
+    background-color: black;
+    opacity: 0.9;
+    font-size: 18px;
+}
+#register{
+   margin-left: 50px;
+    padding-bottom:90px;
+}
+h1{
+    text-align: center;
+    padding:20px ;
+}
+label{
+    width: 450px;
+    border: 30px;
+}
+h2{
+    margin: 0px 0px 0px 130px;
+    padding-top: 20px;
+}
