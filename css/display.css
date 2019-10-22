@@ -1,0 +1,18 @@
+body{
+    background-image: url("../images/request_back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.display_table{
+
+    padding-top: 70px;
+    color: white;
+    direction: rtl;
+    text-align: center;
+    margin: 5% auto;
+    width: 900px;
+    background-color: black;
+    opacity: 0.9;
+    padding-bottom: 30px;
+
+}

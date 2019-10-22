@@ -10,13 +10,13 @@
 </head>
 <body>
 <div class="request_form">
-<form     method="POST">
-    <h2>تسجيل بلاغ جديد</h2>
-    <input class="form-control" type="text" name="req_type" id="req_type" placeholder="نوع البلاغ"><br>
-    <input class="form-control" type="text" name="plate" id="plate" placeholder="رقم اللوحة"><br>
-    <input class="form-control" type="text" name="car_type" id="car_type" placeholder="نوع السيارة"><br>
-    <input class="form-control" type="text" name="car_color" id="car_color" placeholder="لون السيارة"><br>
-    <input class="form-control" type="text_" name="person_desc" id="person_desc" placeholder="وصف الشخص"><br>
+<form   action="server.php "   method="POST">
+    <h2>تسجيل فردجديد</h2>
+    <input class="form-control" type="text" name="id_game" id="id_game" placeholder="رقم الهوية"><br>
+    <input class="form-control" type="text" name="name" id="name" placeholder="الاُسم"><br>
+    <input class="form-control" type="text" name="email" id="email" placeholder="الايميل"><br>
+    <input class="form-control" type="text" name="car_color" id="car_color" placeholder=""><br>
+    <input class="form-control" type="text_" name="person_desc" id="person_desc" placeholder=""><br>
     <input class="form-control" type="text" name="req_desc" id="req_desc" placeholder="تفاصيل البلاغ"><br>
     <input class="form-control" type="text" name="code_no" id="code_no" placeholder="كود النداء"><br>
     <select  name="req_st" id="req_st" form-control">
@@ -24,31 +24,12 @@
         <option>عاجل</option>
         <option>عادى</option>
     </select>
-    <button id="req_sub" name="submit" type="button" class="btn btn-primary">ارسال البلاغ</button>
+    <button id="req_sub" name="submit" type="submit" class="btn btn-primary">ارسال البلاغ</button>
 
 </form>
 </div>
-<?php
 
 
-if($_POST['submit']) {
-    $db = mysqli_connect('localhost', 'root', 'root', 'ags_police');
-
-    $req_type = $_POST['req_type'];
-    $plate = $_POST['plate'];
-    $car_type = $_POST['car_type'];
-    $car_color = $_POST['car_color'];
-    $person_desc = $_POST['req_desc'];
-    $req_desc = $_POST['req_desc'];
-    $code_no = $_POST['code_no'];
-
-
-    $sql = "INSERT  INTO request_police (req_type,plate,car_type,car_color,person_desc,req_desc,code_no) VALUES ('$req_type','$plate','$car_type','$car_color','$person_desc','$req_desc','$code_no');";
-    if (!mysqli_query($db, $sql)) {
-        header("refresh:2; url=request_from.php");
-    };
-};
-        ?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -3,7 +3,7 @@
 
 
         $db=mysqli_connect('localhost','root','root','ags_police');
-
+mysqli_set_charset($con,"utf8");
         $req_type = $_POST['req_type'];
         $plate = $_POST['plate'];
         $car_type= $_POST['car_type'];
@@ -15,5 +15,4 @@
 
         $sql = "INSERT  INTO request_police (req_type,plate,car_type,car_color,person_desc,req_desc,code_no) VALUES ('$req_type','$plate','$car_type','$car_color','$person_desc','$req_desc','$code_no');";
         mysqli_query($db, $sql);
-        header("refresh:2; url=request_from.php");
 
