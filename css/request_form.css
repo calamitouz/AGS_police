@@ -9,29 +9,42 @@ h2{
     color: white;
 }
 .request_form{
+    width: 30%!important;
     padding-top: 30px;
     color: black;
     direction: rtl;
     text-align: center;
-    margin: 5% auto;
+    margin: 7% auto;
     width: 465px;
   background-color: black;
     opacity: 0.9;
     padding-bottom: 30px;
 }
 input,select{
-    width: 90%!important;
+    width: 95%!important;
     margin-right: 20px;
+    margin: 3px auto;
 }
 
 input::placeholder{
     font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
 }
-#req_sub{
-    width: 120px;
-    margin-top: 20px;
+#signUp-submit{
+
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
 }
 #req_ttype{
 width: 170px;
+}
+#sector{
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px auto;
 }
 

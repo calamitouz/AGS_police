@@ -1,20 +1,18 @@
 body{
-    background-image: url("../../php_storm_projects/AGS_police/images/bakg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: black;
 }
 .login-page{
     direction: rtl;
     text-align: center;
     position: absolute;
-    margin: 15% auto;
+    margin: 13% auto;
     top: 0;
     right: 50px;
     bottom: 0;
     left: 0;
     width: 400px;
     border-radius: 3px;
-    color: red;
+    color: gold;
 }
 input::placeholder{
     font-weight: bold;
@@ -24,7 +22,7 @@ input::placeholder{
 input{
     text-align: right;
     margin-bottom: 20px;
-    width: 80%;
+    width: 90%;
 }
 #sub{
     padding-left: 20px;
@@ -35,4 +33,10 @@ input{
 label {
 
 
+}
+#logo{
+
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 45px;
 }
