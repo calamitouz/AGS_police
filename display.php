@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>مشاهدة</title>
+    <title>منسوبي وزراة الداخلية</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -54,8 +54,8 @@
                             <div hidden><?php echo $row['game_id'];?></div>
                                 <td class="column1"><?php echo $row['game_id'];?></td>
                                 <td class="column3"><?php echo $row['name'];?></td>
-                            <td class=""><?php echo $row['rank'];?></td>
-                            <td class="column2"><?php echo $row['sector'];?></td>
+                            <td class=""><?php echo $row['rank_id'];?></td>
+                            <td class="column2"><?php echo $row['sector_id'];?></td>
                                 <td class="column4"><?php echo $row['code'];?></td>
                                 <td class="column5"><?php echo $row['hire_date'];?></td>
                                 <td class="column6"> <table><tr>

@@ -36,17 +36,22 @@ if(isset($_GET['mail'])){
         <br>
         <h5 style="color: red;margin-left: 450px; margin-bottom: 30px; font-family:'bold'; font-size: 17px;">*تاكد من المعلومات المدخلة</h5>
         <?php
+    }else if(isset($_GET['register'])) {
+        ?>
+        <br>
+        <h5 style="color:green;margin-left: 25px; margin-bottom: 30px; font-family:'bold'; font-size: 20px;">تم التسجيل بنجاح</h5>
+        <?php
     }
     ?>
     <select  on class="form-control" name="sector" id="sector" >
         <option selected><?php echo $sector;?></option>
     <option>الشرطة</option>
     <option>القوات الخاصة</option>
-    <option>امن الطرق</option><br>
+    <option>أمن الطرق</option><br>
     </select>
     <input class="form-control" type="text" name="id_game" id="id_game" value="<?php echo $uid;?>" placeholder="رقم الهوية"><br>
     <input class="form-control" type="text" name="name" id="name" value="<?php echo $name;?>" placeholder="الاُسم"><br>
-    <input class="form-control" type="text" name="email" id="email" value="<?php echo $mail;?>" placeholder="الايميل"><br>
+    <input class="form-control" type="text" name="email" id="email" value="hed@hotmail.com" placeholder="الايميل"><br>
     <button id="signUp-submit" name="signUp-submit" type="submit" class="btn btn-primary">تسجيل</button>
 </form>
 </div>
